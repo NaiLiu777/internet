@@ -91,6 +91,7 @@ h1 {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .question.active {

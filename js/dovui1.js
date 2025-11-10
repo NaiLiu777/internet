@@ -9,13 +9,25 @@ const answers = {
 
 // ======== ÂM THANH ========
 const clickSound = document.getElementById("clickSound");
-document.addEventListener("click", () => {
-  if (clickSound) {
-    clickSound.currentTime = 0;
-    clickSound.playbackRate = 1.4;
-    clickSound.play();
+
+document.addEventListener("click", (e) => {
+  // Kiểm tra phần tử có thuộc tính onclick hoặc sự kiện click được gán động
+  const target = e.target;
+
+  // Nếu phần tử có onclick
+  if (target.getAttribute("onclick")) {
+    if (clickSound) {
+      clickSound.pause();
+      clickSound.currentTime = 0;
+      clickSound.volume = 0.3;      // giảm âm lượng
+      clickSound.playbackRate = 1.3; // tăng tốc nhẹ
+      clickSound.play();
+    }
   }
 });
+
+
+
 
 // ======== HIỂN THỊ CÂU HỎI ========
 function showQuestion(num) {
@@ -44,16 +56,21 @@ function checkAnswer(qNum, chosen, el) {
   all.forEach(li => (li.onclick = null)); // Khóa click lại
 
   const navItem = document.querySelector(`nav ul li:nth-child(${qNum})`);
-
+  const correctSound = document.getElementById("correctSound");
+  const wrongSound = document.getElementById("wrongSound");
   if (chosen === correct) {
     el.classList.add("correct");
     score++;
+    correctSound.currentTime = 0; // tua về đầu (nếu phát lại liên tục)
+    correctSound.play(); 
     if (navItem) {
       navItem.classList.remove("nav-wrong");
       navItem.classList.add("nav-correct");
     }
   } else {
     el.classList.add("wrong");
+    wrongSound.currentTime = 0;
+    wrongSound.play();
     if (navItem) {
       navItem.classList.remove("nav-correct");
       navItem.classList.add("nav-wrong");
