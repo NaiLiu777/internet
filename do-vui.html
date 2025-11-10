@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Đố Vui Dân Gian</title>
+    <link rel="icon" type="image/x-icon" href="images/dovui/logo.png">
+    <link rel="stylesheet" href="css/dovui.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Danh sách câu</h2>
+        <ul>
+            <li onclick="showQuestion(1)">Câu 1</li>
+            <li onclick="showQuestion(2)">Câu 2</li>
+            <li onclick="showQuestion(3)">Câu 3</li>
+            <li onclick="showQuestion(4)">Câu 4</li>
+            <li onclick="showQuestion(5)">Câu 5</li>
+            <li onclick="showQuestion(6)">Câu 6</li>
+            <li onclick="showQuestion(7)">Câu 7</li>
+            <li onclick="showQuestion(8)">Câu 8</li>
+            <li onclick="showQuestion(9)">Câu 9</li>
+            <li onclick="showQuestion(10)">Câu 10</li>
+            <li onclick="showQuestion(11)">Câu 11</li>
+            <li onclick="showQuestion(12)">Câu 12</li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Đố Vui Dân Gian</h1>
+            <div id="score">Điểm: 0</div>
+        </header>
+
+        <!-- === Các câu hỏi === -->
+        <section class="question active" id="1">
+            <h2>Câu 1: Con gì đi đứng khệnh khạng, miệng kêu “cục ta cục tác”?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(1, 'A', this)"><strong>A.</strong> Con ngan</li>
+                <li onclick="checkAnswer(1, 'B', this)"><strong>B.</strong> Con gà</li>
+                <li onclick="checkAnswer(1, 'C', this)"><strong>C.</strong> Con ngan</li>
+                <li onclick="checkAnswer(1, 'D', this)"><strong>D.</strong> Con ngỗng</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(1)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(1)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="2">
+            <h2>Câu 2: Con gì áo giáp bọc thân, bò chậm lề mề, mà vẫn thắng thỏ?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(2, 'A', this)"><strong>A.</strong> Con cua</li>
+                <li onclick="checkAnswer(2, 'B', this)"><strong>B.</strong> Con cá sấu</li>
+                <li onclick="checkAnswer(2, 'C', this)"><strong>C.</strong> Con rùa</li>
+                <li onclick="checkAnswer(2, 'D', this)"><strong>D.</strong> Con ốc sên</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(2)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(2)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="3">
+            <h2>Câu 3: Da cóc mà bọc trứng gà, bổ ra thơm phức cả nhà muốn ăn?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(3, 'A', this)"><strong>A.</strong> Quả mít</li>
+                <li onclick="checkAnswer(3, 'B', this)"><strong>B.</strong> Quả sầu riêng</li>
+                <li onclick="checkAnswer(3, 'C', this)"><strong>C.</strong> quả bưởi</li>
+                <li onclick="checkAnswer(3, 'D', this)"><strong>D.</strong> quả dứa</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(3)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(3)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="4">
+            <h2>Câu 4: Một mẹ mà đẻ trăm con, con nào con nấy, mũi tròn như nhau?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(4, 'A', this)"><strong>A.</strong> Nải chuối</li>
+                <li onclick="checkAnswer(4, 'B', this)"><strong>B.</strong> trùm nho</li>
+                <li onclick="checkAnswer(4, 'C', this)"><strong>C.</strong> Bó đũa</li>
+                <li onclick="checkAnswer(4, 'D', this)"><strong>D.</strong> Hộp diêm</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(4)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(4)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="5">
+            <h2>Câu 5: Sáng thì lấp lánh, tối thì đi ngủ, ở tận trên cao, mà ai cũng thấy?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(5, 'A', this)"><strong>A.</strong> Mặt trời</li>
+                <li onclick="checkAnswer(5, 'B', this)"><strong>B.</strong> Ngôi sao</li>
+                <li onclick="checkAnswer(5, 'C', this)"><strong>C.</strong> Mặt trăng</li>
+                <li onclick="checkAnswer(5, 'D', this)"><strong>D.</strong> Đèn lồng</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(5)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(5)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="6">
+            <h2>Câu 6: Hoa gì tên của một loài chim, nở giữa mùa hè, đỏ rực sân trường?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(6, 'A', this)"><strong>A.</strong> Hoa hồng</li>
+                <li onclick="checkAnswer(6, 'B', this)"><strong>B.</strong> Hoa yến</li>
+                <li onclick="checkAnswer(6, 'C', this)"><strong>C.</strong> Hoa phượng</li>
+                <li onclick="checkAnswer(6, 'D', this)"><strong>D.</strong> Hoa cúc</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(6)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(6)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="7">
+            <h2>Câu 7: Cái gì của bạn, mà người khác dùng nhiều hơn bạn?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(7, 'A', this)"><strong>A.</strong> Cái bóng</li>
+                <li onclick="checkAnswer(7, 'B', this)"><strong>B.</strong> Cái tên</li>
+                <li onclick="checkAnswer(7, 'C', this)"><strong>C.</strong> Hơi thở</li>
+                <li onclick="checkAnswer(7, 'D', this)"><strong>D.</strong> Tiếng nói</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(7)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(7)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="8">
+            <h2>Câu 8: Cái gì khi mua thì đen, khi dùng thì đỏ, khi vứt đi thì xám?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(8, 'A', this)"><strong>A.</strong> Gỗ</li>
+                <li onclick="checkAnswer(8, 'B', this)"><strong>B.</strong> Nến</li>
+                <li onclick="checkAnswer(8, 'C', this)"><strong>C.</strong> Tờ giấy</li>
+                <li onclick="checkAnswer(8, 'D', this)"><strong>D.</strong> Cục than</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(8)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(8)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="9">
+            <h2>Câu 9: Cái gì có cổ mà không có mồm, có thân không ruột, có nắp không nhà?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(9, 'A', this)"><strong>A.</strong> Cái chai</li>
+                <li onclick="checkAnswer(9, 'B', this)"><strong>B.</strong> Cái cốc</li>
+                <li onclick="checkAnswer(9, 'C', this)"><strong>C.</strong> Cái bát</li>
+                <li onclick="checkAnswer(9, 'D', this)"><strong>D.</strong> Cái nồi</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(9)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(9)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="10">
+            <h2>Câu 10: Bay thấp thì mưa, bay cao thì nắng, bay vừa thì râm?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(10, 'A', this)"><strong>A.</strong> Con bướm</li>
+                <li onclick="checkAnswer(10, 'B', this)"><strong>B.</strong> Con chim én</li>
+                <li onclick="checkAnswer(10, 'C', this)"><strong>C.</strong> Con chuồn chuồn</li>
+                <li onclick="checkAnswer(10, 'D', this)"><strong>D.</strong> Con dơi</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(10)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(10)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="11">
+            <h2>Câu 11: Mình vàng, áo cũng vàng, bò vào đống rơm, cả làng đều biết?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(11, 'A', this)"><strong>A.</strong> Con gà</li>
+                <li onclick="checkAnswer(11, 'B', this)"><strong>B.</strong> Ngọn lửa</li>
+                <li onclick="checkAnswer(11, 'C', this)"><strong>C.</strong> Mặt trời</li>
+                <li onclick="checkAnswer(11, 'D', this)"><strong>D.</strong> Hạt thóc</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(11)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(11)">Tiếp ➡</button>
+            </div>
+        </section>
+
+        <section class="question" id="12">
+            <h2>Câu 12: Cái gì đập thì sống, không đập thì chết?</h2>
+            <ul class="answers">
+                <li onclick="checkAnswer(12, 'A', this)"><strong>A.</strong> Cái trống</li>
+                <li onclick="checkAnswer(12, 'B', this)"><strong>B.</strong> Cái đinh</li>
+                <li onclick="checkAnswer(12, 'C', this)"><strong>C.</strong> Quả bóng</li>
+                <li onclick="checkAnswer(12, 'D', this)"><strong>D.</strong> Trái tim</li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="prev-btn" onclick="prev(12)">⬅ Quay lại</button>
+                <button class="next-btn" onclick="next(12)">Tiếp ➡</button>
+            </div>
+        </section>
+
+
+        <!-- Màn hình kết thúc -->
+        <section class="question" id="finish">
+            <h2>🎉 Chúc mừng bạn đã hoàn thành!</h2>
+            <p id="final-score">Điểm của bạn: </p>
+            <button id="restart" onclick="restartGame()">Chơi lại</button>
+        </section>
+        
+    </main>
+    <audio id="clickSound" src="sound/click.mp3" preload="auto"></audio>
+    <script src="js/dovui1.js"></script>
+</body>
+
+</html>

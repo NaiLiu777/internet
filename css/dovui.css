@@ -1,0 +1,217 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #d7b282;
+    margin: 0;
+    display: flex;
+    
+}
+
+/* === Thanh bên === */
+nav {
+    width: 200px;
+    background-color: rgba(150, 92, 16, 0.1);
+    color: white;
+    height: 40%;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    transform: translateY(-30%);
+    padding: 5px 15px 15px 15px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+nav h2 {
+    position: sticky;
+    /* “Ghim” phần tiêu đề khi cuộn */
+    top: 0;
+    background-color: #8b5e3c;
+    /* Giữ nền cùng màu */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    z-index: 1;
+    /* Đè lên danh sách khi cuộn */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+nav ul li:hover {
+    background-color: #b47b48;
+}
+
+nav ul li.active {
+    background-color: #ffcc70;
+    color: #333;
+}
+
+/* === Phần chính === */
+main {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+}
+
+#score {
+    font-size: 20px;
+    color: #444;
+}
+
+/* === Câu hỏi === */
+.question {
+    display: none;
+    width: 50%;
+    margin: 0px auto ;
+    /* 200px sidebar + 40px khoảng trống */
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.question.active {
+    display: block;
+}
+
+.question h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/*khi bôi đen nó sẽ hiện ra*/
+.question h2::selection {
+    color: #faf8f8;
+    background: rgb(214, 135, 8);
+}
+
+/* === Đáp án === */
+.answers li {
+    list-style: none;
+    background: #efeded;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 15px;
+    width: 90%;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.answers li:hover {
+    background: #ffe49c;
+    transform: scale(1.05);
+}
+
+.answers li:active {
+    transform: scale(0.95);
+    background: #ffd86b;
+}
+
+.correct {
+    background-color: #b4ff9f !important;
+    border: 2px solid #00a000 !important;
+}
+
+.wrong {
+    background-color: #ff9f9f !important;
+    border: 2px solid #c30000 !important;
+}
+
+/*Nút chuyển tiếp*/
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.nav-buttons button {
+    background-color: #edba6f;
+    /* màu cam nổi bật */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons button:hover {
+    background-color: #754706;
+    transform: scale(1.05);
+}
+
+.nav-buttons button:focus {
+    background-color: #754706;
+    transform: scale(0.95);
+}
+
+/* Câu đang xem */
+.nav-active {
+    background-color: #ffd86b !important;
+    /* vàng nhạt */
+    color: #000;
+    font-weight: bold;
+}
+
+/* Câu trả lời đúng */
+.nav-correct {
+    background-color: #5cb85c !important;
+    /* xanh lá */
+    color: white;
+}
+
+/* Câu trả lời sai */
+.nav-wrong {
+    background-color: #d9534f !important;
+    /* đỏ */
+    color: white;
+}
+
+/* === Kết thúc === */
+#finish h2 {
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #ffcc70;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#restart:hover {
+    background-color: #ffb347;
+}
