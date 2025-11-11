@@ -1,4 +1,3 @@
-// ======== CẤU HÌNH ========
 let score = 0;
 const total = 12;
 const answers = {
@@ -25,8 +24,6 @@ document.addEventListener("click", (e) => {
     }
   }
 });
-
-
 
 
 // ======== HIỂN THỊ CÂU HỎI ========
@@ -86,6 +83,11 @@ function showFinish() {
   const finish = document.getElementById("finish");
   finish.classList.add("active");
   document.getElementById("final-score").textContent = `Điểm của bạn: ${score}`;
+
+  const finishSound = document.getElementById("finishSound");
+  finishSound.currentTime = 0;
+  finishSound.volume = 1; // tuỳ chỉnh
+  finishSound.play();
 }
 
 // ======== CHƠI LẠI ========
